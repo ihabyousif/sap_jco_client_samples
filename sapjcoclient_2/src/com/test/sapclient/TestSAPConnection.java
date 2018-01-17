@@ -41,6 +41,7 @@ public class TestSAPConnection {
 	}
 	
 	static void createDestinationPropertiesFile(String destinationName, Properties connectProperties) {
+		// check that current user has permission to this path
 		String fileName = "/var/sap/conf/"+destinationName+".jcoDestination";
 		File destCfg = new File(fileName);
 		try {
